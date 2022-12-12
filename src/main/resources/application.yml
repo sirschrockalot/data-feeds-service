@@ -1,0 +1,21 @@
+server:
+  port: 8080
+  compression:
+    enabled: true
+    mime-types:
+    - application/json
+    min-response-size: 5120
+  tomcat:
+    max-http-header-size: 16000
+spring:
+  application:
+    name: DATA-FEEDS-SERVICE
+  profiles:
+    active:
+    - local
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - '*'
